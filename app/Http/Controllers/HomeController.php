@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        //
+        return redirect('')->with('status', 'Data berhasil di print!');
     }
 
     /**
@@ -73,7 +73,8 @@ class HomeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $transaction = Transaction::where('id', $id)->first();
+        return view('home', compact('transaction'));
     }
 
     /**
@@ -85,7 +86,15 @@ class HomeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //dd($request);
+        $transaction = Transaction::where('id', $id)->first();
+        $transaction->nama = $request->nama;
+        $transaction->jenis = $request->jenis;
+        $transaction->berat = $request->berat;
+        $transaction->harga = $request->harga;
+        $transaction->pembayaran = $request->bayar;
+        $transaction->update();
+        return redirect()->route('Home')->with('status', 'Data berhasil diupdate');
     }
 
     /** 

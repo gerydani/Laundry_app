@@ -24,7 +24,7 @@
                         <th scope="row">{{$i++}}</th>
                         <td>{{$trans->nama}}</td>
                         <td>{{$trans->jenis}}</td>
-                        <td>{{$trans->berat}}</td>
+                        <td>{{$trans->berat}} kg</td>
                         <td>{{$trans->harga}}</td>
                         <td>{{$trans->pembayaran}}</td>
                         <td>
@@ -35,6 +35,7 @@
                                 @csrf
                                 <button class="btn badge btn-custom btn-rounded waves-effect waves-light w-md m-b-5 btn-danger">Delete</button>
                             </form>
+                            <a href="{{route('Edit.Transaction', ['id'=>$trans->id])}}" class="btn badge btn-custom btn-rounded waves-effect waves-light w-md m-b-5 btn-success">Edit</a>
                         </td>
                     </tr>
                     @endforeach

@@ -16,3 +16,6 @@ Route::get('/receipt/{id}', 'HomeController@receipt')->name('Receipt');
 Route::get('/receipt', 'HomeController@receiptAll')->name('ReceiptAll');
 Route::post('/transaction', 'HomeController@store');
 Route::delete('/receipt/delete/{id}', 'HomeController@destroy')->name('DeleteReceipt');
+Route::get('/back', 'HomeController@create')->name('back');
+Route::get('/edit/{id}', 'HomeController@edit')->name('Edit.Transaction');
+Route::put('/update/{id}', 'HomeController@update')->name('Update.Transaction');
