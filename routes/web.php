@@ -19,3 +19,9 @@ Route::delete('/receipt/delete/{id}', 'HomeController@destroy')->name('DeleteRec
 Route::get('/back', 'HomeController@create')->name('back');
 Route::get('/edit/{id}', 'HomeController@edit')->name('Edit.Transaction');
 Route::put('/update/{id}', 'HomeController@update')->name('Update.Transaction');
+
+Route::post('login', 'HomeController@login')->name('login');
+Route::get('/register', 'UserController@create')->name('register');
+Route::post('/register/save', 'UserController@store');
+
+Route::get('/logout', 'HomeController@logout')->name('logout');

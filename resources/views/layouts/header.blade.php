@@ -12,6 +12,9 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/receipt">Receipt</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="logout">Logout</a>
+                </li>
             </ul>
         </div>
     </div>

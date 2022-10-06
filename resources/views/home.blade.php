@@ -15,7 +15,7 @@
                     <div class="row mb-3">
                         <label for="colFormLabel" class="col-sm-2 col-form-label">Nama</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="nama" name="nama" placeholder="example: Saipuddin" value="@isset($transaction->nama){{$transaction->nama}}@endisset">
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="example: Saipuddin" value="{{session('nama')}}" readonly>
                         </div>
                     </div>
                     <div class="row mb-3">
